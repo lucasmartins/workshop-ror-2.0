@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @central_correio.nome %>
+</p>
+
+<p>
+  <b>Capacidade:</b>
+  <%= @central_correio.capacidade %>
+</p>
+
+
+<%= link_to 'Edit', edit_central_correio_path(@central_correio) %> |
+<%= link_to 'Back', central_correios_path %>
