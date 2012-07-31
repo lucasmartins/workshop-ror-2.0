@@ -10,6 +10,11 @@
   <%= @selo.prioridade.nome %>
 </p>
 
+<p>
+  <b>Preço:</b>
+  <%= number_to_currency(@selo.preco) %>
+</p>
+
 
 <%= link_to 'Edit', edit_selo_path(@selo) %> |
 <%= link_to 'Back', selos_path %>
