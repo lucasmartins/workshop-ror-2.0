@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120731062218) do
+ActiveRecord::Schema.define(:version => 20120731070302) do
 
   create_table "central_correios", :force => true do |t|
     t.string   "nome"
@@ -19,6 +19,18 @@ ActiveRecord::Schema.define(:version => 20120731062218) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "entregas", :force => true do |t|
+    t.string   "remetente"
+    t.string   "destinatario"
+    t.text     "conteudo"
+    t.integer  "selo_id"
+    t.boolean  "entrege"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "entregas", ["selo_id"], :name => "index_entregas_on_selo_id"
 
   create_table "prioridades", :force => true do |t|
     t.string   "nome"
