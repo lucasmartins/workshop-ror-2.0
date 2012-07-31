@@ -16,6 +16,10 @@
     <%= f.text_field :nome %>
   </div>
   <div class="field">
+    <%= f.label :preco %><br />
+    <%= f.text_field :preco %>
+  </div>
+  <div class="field">
     <%= f.label :prioridade %><br />
     <%= collection_select :selo, :prioridade_id, Prioridade.order(:name=>'DESC'), :id, :nome %>
   </div>

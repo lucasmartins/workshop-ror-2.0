@@ -1,6 +1,7 @@
 class Selo < ActiveRecord::Base
   belongs_to :prioridade
-  attr_accessible :nome, :prioridade_id
+  attr_accessible :nome, :prioridade_id, :preco
 
-  validates :nome, :prioridade_id, :presence=>true
+  validates :nome, :prioridade_id, :preco, :presence=>true
+  validates :preco, :numericality=>true
 end
