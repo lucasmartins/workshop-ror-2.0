@@ -50,7 +50,7 @@ Correios::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'index#central_correios'
+  root :to => 'central_correios#index'
 
   # See how all your routes lay out with "rake routes"
 
