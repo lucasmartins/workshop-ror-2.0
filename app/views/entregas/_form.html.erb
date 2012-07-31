@@ -25,12 +25,9 @@
   </div>
   <div class="field">
     <%= f.label :selo %><br />
-    <%= f.text_field :selo %>
+    <%= collection_select :entrega, :selo_id, Selo.order(:nome=>'DESC'), :id, :nome %>
   </div>
-  <div class="field">
-    <%= f.label :entrege %><br />
-    <%= f.check_box :entrege %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -17,7 +17,7 @@
     <td><%= entrega.remetente %></td>
     <td><%= entrega.destinatario %></td>
     <td><%= entrega.conteudo %></td>
-    <td><%= entrega.selo %></td>
+    <td><%= image_tag entrega.selo.imagem(:pequeno) %></td>
     <td><%= entrega.entrege %></td>
     <td><%= link_to 'Show', entrega %></td>
     <td><%= link_to 'Edit', edit_entrega_path(entrega) %></td>
