@@ -5,7 +5,7 @@ class CreateEntregas < ActiveRecord::Migration
       t.string :destinatario
       t.text :conteudo
       t.references :selo
-      t.boolean :entrege
+      t.boolean :entregue
 
       t.timestamps
     end

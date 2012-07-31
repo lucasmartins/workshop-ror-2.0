@@ -6,7 +6,7 @@
     <th>Destinatario</th>
     <th>Conteudo</th>
     <th>Selo</th>
-    <th>Entrege</th>
+    <th>entregue</th>
     <th></th>
     <th></th>
     <th></th>
@@ -18,7 +18,13 @@
     <td><%= entrega.destinatario %></td>
     <td><%= entrega.conteudo %></td>
     <td><%= image_tag entrega.selo.imagem(:pequeno) %></td>
-    <td><%= entrega.entrege %></td>
+    <td>
+      <% if entrega.entregue == true %>
+        <%= image_tag('http://railsnapraia.com/uploads/workshop_ror/entregue.png') %>
+      <% else %>
+        Não
+      <% end %>
+    </td>
     <td><%= link_to 'Show', entrega %></td>
     <td><%= link_to 'Edit', edit_entrega_path(entrega) %></td>
     <td><%= link_to 'Destroy', entrega, method: :delete, data: { confirm: 'Are you sure?' } %></td>

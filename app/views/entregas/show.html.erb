@@ -21,8 +21,12 @@
 </p>
 
 <p>
-  <b>Entrege:</b>
-  <%= @entrega.entrege %>
+  <b>Entregue:</b>
+  <% if @entrega.entregue %>
+    <%= image_tag('http://railsnapraia.com/uploads/workshop_ror/entregue.png') %>
+  <% else %>
+    Não
+  <% end %>
 </p>
 
 

@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(:version => 20120731070302) do
     t.string   "destinatario"
     t.text     "conteudo"
     t.integer  "selo_id"
-    t.boolean  "entrege"
+    t.boolean  "entregue"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
