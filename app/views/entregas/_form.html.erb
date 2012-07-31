@@ -1,0 +1,37 @@
+<%= form_for(@entrega) do |f| %>
+  <% if @entrega.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@entrega.errors.count, "error") %> prohibited this entrega from being saved:</h2>
+
+      <ul>
+      <% @entrega.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :remetente %><br />
+    <%= f.text_field :remetente %>
+  </div>
+  <div class="field">
+    <%= f.label :destinatario %><br />
+    <%= f.text_field :destinatario %>
+  </div>
+  <div class="field">
+    <%= f.label :conteudo %><br />
+    <%= f.text_area :conteudo %>
+  </div>
+  <div class="field">
+    <%= f.label :selo %><br />
+    <%= f.text_field :selo %>
+  </div>
+  <div class="field">
+    <%= f.label :entrege %><br />
+    <%= f.check_box :entrege %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

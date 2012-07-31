@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Remetente:</b>
+  <%= @entrega.remetente %>
+</p>
+
+<p>
+  <b>Destinatario:</b>
+  <%= @entrega.destinatario %>
+</p>
+
+<p>
+  <b>Conteudo:</b>
+  <%= @entrega.conteudo %>
+</p>
+
+<p>
+  <b>Selo:</b>
+  <%= @entrega.selo %>
+</p>
+
+<p>
+  <b>Entrege:</b>
+  <%= @entrega.entrege %>
+</p>
+
+
+<%= link_to 'Edit', edit_entrega_path(@entrega) %> |
+<%= link_to 'Back', entregas_path %>

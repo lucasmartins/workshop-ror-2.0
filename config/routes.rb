@@ -1,4 +1,6 @@
 Correios::Application.routes.draw do
+  resources :entregas
+
   resources :selos
 
   resources :prioridades
