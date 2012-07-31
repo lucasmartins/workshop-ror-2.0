@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120731055833) do
+ActiveRecord::Schema.define(:version => 20120731060727) do
 
   create_table "central_correios", :force => true do |t|
     t.string   "nome"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(:version => 20120731055833) do
     t.integer  "prioridade_id"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.float    "preco"
   end
 
   add_index "selos", ["prioridade_id"], :name => "index_selos_on_prioridade_id"
