@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @selo.nome %>
+</p>
+
+<p>
+  <b>Prioridade:</b>
+  <%= @selo.prioridade %>
+</p>
+
+
+<%= link_to 'Edit', edit_selo_path(@selo) %> |
+<%= link_to 'Back', selos_path %>

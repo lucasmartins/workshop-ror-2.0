@@ -1,4 +1,6 @@
 Correios::Application.routes.draw do
+  resources :selos
+
   resources :prioridades
 
   resources :central_correios
