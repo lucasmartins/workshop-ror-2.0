@@ -14,7 +14,7 @@
   <tr>
     <td><%= selo.nome %></td>
     <td><%= selo.prioridade.nome %></td>
-    <td><%= selo.preco %></td>
+    <td><%= number_to_currency(selo.preco) %></td>
     <td><%= link_to 'Show', selo %></td>
     <td><%= link_to 'Edit', edit_selo_path(selo) %></td>
     <td><%= link_to 'Destroy', selo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
