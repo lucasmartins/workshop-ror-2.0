@@ -1,5 +1,7 @@
 Correios::Application.routes.draw do
-  resources :entregas
+  resources :entregas do
+    get 'entregar'
+  end
 
   resources :selos
 

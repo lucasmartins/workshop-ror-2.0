@@ -1,3 +1,5 @@
+<p id="notice"><%= notice %></p>
+
 <h1>Listing entregas</h1>
 
 <table>
@@ -7,6 +9,7 @@
     <th>Conteudo</th>
     <th>Selo</th>
     <th>entregue</th>
+    <th></th>
     <th></th>
     <th></th>
     <th></th>
@@ -28,6 +31,7 @@
     <td><%= link_to 'Show', entrega %></td>
     <td><%= link_to 'Edit', edit_entrega_path(entrega) %></td>
     <td><%= link_to 'Destroy', entrega, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Entregar', entrega_entregar_path(entrega.id) %></td>
   </tr>
 <% end %>
 </table>

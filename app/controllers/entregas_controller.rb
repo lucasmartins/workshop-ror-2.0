@@ -1,4 +1,12 @@
 class EntregasController < ApplicationController
+
+  def entregar
+    @entrega = Entrega.find(params[:entrega_id])
+    @entrega.entregue = true
+    @entrega.save
+
+    redirect_to entregas_path, notice: 'Entregue com sucesso!'
+  end
   # GET /entregas
   # GET /entregas.json
   def index
