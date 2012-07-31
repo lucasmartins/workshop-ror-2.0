@@ -15,6 +15,9 @@
   <%= number_to_currency(@selo.preco) %>
 </p>
 
+<p>
+  <%= image_tag @selo.imagem.url(:pequeno) %>
+</p>
 
 <%= link_to 'Edit', edit_selo_path(@selo) %> |
 <%= link_to 'Back', selos_path %>

@@ -1,4 +1,4 @@
-<%= form_for(@selo) do |f| %>
+<%= form_for(@selo,:html => { :multipart => true }) do |f| %>
   <% if @selo.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@selo.errors.count, "error") %> prohibited this selo from being saved:</h2>
@@ -23,6 +23,11 @@
     <%= f.label :prioridade %><br />
     <%= collection_select :selo, :prioridade_id, Prioridade.order(:name=>'DESC'), :id, :nome %>
   </div>
+
+  <%= f.file_field :imagem %>
+  <br>
+  <br>
+
   <div class="actions">
     <%= f.submit %>
   </div>

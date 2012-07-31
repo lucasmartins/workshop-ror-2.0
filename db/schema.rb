@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120731060727) do
+ActiveRecord::Schema.define(:version => 20120731062218) do
 
   create_table "central_correios", :force => true do |t|
     t.string   "nome"
@@ -29,9 +29,13 @@ ActiveRecord::Schema.define(:version => 20120731060727) do
   create_table "selos", :force => true do |t|
     t.string   "nome"
     t.integer  "prioridade_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
     t.float    "preco"
+    t.string   "imagem_file_name"
+    t.string   "imagem_content_type"
+    t.integer  "imagem_file_size"
+    t.datetime "imagem_updated_at"
   end
 
   add_index "selos", ["prioridade_id"], :name => "index_selos_on_prioridade_id"
